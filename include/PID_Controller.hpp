@@ -10,13 +10,12 @@
 #include <vector>
 
 class PID_Controller{
-
-PID_Controller(double kp, double ki, double kd);
+ public:
+  PID_Controller(double kp, double ki, double kd);
+  ~PID_Controller();
  private:
   double Kp, Ki, Kd;
   float computeError();
 
+
 };
-
-
-
