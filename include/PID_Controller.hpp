@@ -17,5 +17,4 @@ class PID_Controller{
   double Kp, Ki, Kd;
   float computeError();
 
-
 };
