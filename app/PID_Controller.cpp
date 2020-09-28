@@ -1,19 +1,105 @@
-/*
- * PID_Controller.cpp
- *
- *  Created on: Sep 26, 2020
- *      Author: lbarret
+/**
+ * @file pid.cpp
+ * @version 1.0
+ * @brief Header file for pid class
+ * @Created on: Sep 28, 2020
+ * @copyright 2020 
+ * @Auther Loic Barret (Driver),  Aditya Goswami (Navigator)
  */
+
+// c++ header file
 #include <iostream>
-#include <vector>
-#include "PID_Controller.hpp"
 
-PID_Controller::PID_Controller(double kp, double ki, double kd){
-Kp = kp;
-Ki = ki;
-Kd = kd;
+// user defined header file
+#include "../include/PID_Controller.hpp"
+
+/**
+ * @brief PIDController constructor
+ * @param none
+ * @return none
+ */
+PIDController::PIDController(void) : Kp_(0.5), Ki_(0.001), Kd_(0.01),
+                                    time_interval_(0.05), previous_error_(0.0),
+                                    accumulation_error_(0.0) {
+    std::cout << "Default constructor called" << std::endl;
 }
-float computeError(){
 
-  return 1;
+/**
+ * @brief Parameterized PID Constructor
+ * @param[1] Kp_ which is a proportional coefficient
+ * @param[2] Ki_ which is a integral coefficient
+ * @param[3] Kd_ which is a differential coefficient
+ * @param[4] time_interval_ which is delta t
+ * @return none
+ */
+PIDController::PIDController(double Kp, double Ki, double Kd,
+                            double time_interval) : Kp_(Kp), Ki_(Ki), Kd_(Kd),
+                            time_interval_(time_interval),
+                            previous_error_(0.0), accumulation_error_(0.0) {
+    std::cout << "Parameterized constructor called" << std::endl;
+}
+
+/**
+ * @brief compute method
+ * @param[1] target_velocity, which is Set Point(SP)
+ * @param[2] actual_velocity, which is Process Value (PV)
+ * @return double
+ */
+auto PIDController::compute(double target_velocity,
+                            double actual_velocity) -> double {
+  std::cout << "Implement compute function" << std::endl;
+  return 0;
+}
+
+/**
+ * @brief Method to get value of private class member previous_error_
+ * @param none
+ * @return double
+ */
+auto PIDController::getPreviousError() -> double {
+    return previous_error_;
+}
+
+/**
+ * @brief Method to get value of private class member accumulation_error_
+ * @param none
+ * @return double
+ */
+auto PIDController::getAccumulationError() -> double {
+    return accumulation_error_;
+}
+
+/**
+ * @brief Method to get value of private class member time_interval_
+ * @param none
+ * @return double
+ */
+auto PIDController::getTimeInterval() -> double {
+    return time_interval_;
+}
+
+/**
+ * @brief Method to get value of private class member Kp_
+ * @param none
+ * @return double
+ */
+auto PIDController::getKp() -> double {
+    return Kp_;
+}
+
+/**
+ * @brief Method to get value of private class member Ki_
+ * @param none
+ * @return double
+ */
+auto PIDController::getKi() -> double {
+    return Ki_;
+}
+/**
+ * @brief Method to get value of private class member Kd_
+ * @param none
+ * @return double
+ */
+auto PIDController::getKd() -> double {
+    return Kd_;
 }
