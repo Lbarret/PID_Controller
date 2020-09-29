@@ -85,7 +85,7 @@ unfold Build Targets, double click on "all" to build all projects.
 1. In Eclipse, right click on the PID_Controller-eclipse in Project Explorer,
 select Run As -> Local C/C++ Application
 
-2. Choose the binaries to run (e.g. shell-app, cpp-test for unit testing)
+2. Choose the binaries to run (e.g. shell-app, cpp-test for unit testing.)
 
 
 
