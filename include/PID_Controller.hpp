@@ -16,7 +16,6 @@
  */
 class PIDController{
  public:
-
   /**
    * @brief PIDController constructor
    * @param none
@@ -61,28 +60,28 @@ class PIDController{
     * @param none
     * @return double
     */
-   auto getTimeInterval() -> double;
+  auto getTimeInterval() -> double;
 
    /**
      * @brief Method to get value of private class member Kp_
      * @param none
      * @return double
      */
-   auto getKp() -> double;
+  auto getKp() -> double;
 
    /**
      * @brief Method to get value of private class member Ki_
      * @param none
      * @return double
      */
-   auto getKi() -> double;
+  auto getKi() -> double;
 
    /**
      * @brief Method to get value of private class member Kd_
      * @param none
      * @return double
      */
-   auto getKd() -> double;
+  auto getKd() -> double;
 
   // Contains private data members
  private:
