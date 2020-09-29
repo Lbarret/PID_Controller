@@ -1,6 +1,6 @@
 # PID Controller
 [![Build Status](https://travis-ci.org/Lbarret/PID_Controller.svg?branch=master)](https://travis-ci.org/Lbarret/PID_Controller)
-[![Coverage Status](https://coveralls.io/repos/github/Lbarret/PID_Controller/badge.svg?branch=master)](https://coveralls.io/github/Lbarret/PID_Controller?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/Lbarret/PID_Controller/badge.svg?branch=master)](https://coveralls.io/github/Lbarret/PID_Controller?branch=master@service=github)
 ---
 
 ## Overview
