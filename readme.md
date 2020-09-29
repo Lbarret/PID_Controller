@@ -26,7 +26,7 @@ This repository serves as a simple C++ PID controller algorithm implementation w
 
 ## Standard install via command-line
 ```
-git clone --recursive https://github.com/dpiet/cpp-boilerplate
+git clone --recursive https://github.com/lbarret/PID_Controller
 cd <path to repository>
 mkdir build
 cd build
@@ -53,22 +53,22 @@ In your Eclipse workspace directory (or create a new one), checkout the repo (an
 ```
 mkdir -p ~/workspace
 cd ~/workspace
-git clone --recursive https://github.com/dpiet/cpp-boilerplate
+git clone --recursive https://github.com/lbarret/PID_Controller
 ```
 
-In your work directory, use cmake to create an Eclipse project for an [out-of-source build] of cpp-boilerplate
+In your work directory, use cmake to create an Eclipse project for an [out-of-source build] of PID_Controller
 
 ```
 cd ~/workspace
-mkdir -p boilerplate-eclipse
-cd boilerplate-eclipse
-cmake -G "Eclipse CDT4 - Unix Makefiles" -D CMAKE_BUILD_TYPE=Debug -D CMAKE_ECLIPSE_VERSION=4.7.0 -D CMAKE_CXX_COMPILER_ARG1=-std=c++14 ../cpp-boilerplate/
+mkdir -p PID_Controller-eclipse
+cd PID_Controller-eclipse
+cmake -G "Eclipse CDT4 - Unix Makefiles" -D CMAKE_BUILD_TYPE=Debug -D CMAKE_ECLIPSE_VERSION=4.7.0 -D CMAKE_CXX_COMPILER_ARG1=-std=c++14 ../PID_Controller/
 ```
 
 ## Import
 
 Open Eclipse, go to File -> Import -> General -> Existing Projects into Workspace -> 
-Select "boilerplate-eclipse" directory created previously as root directory -> Finish
+Select "PID_Controller-eclipse" directory created previously as root directory -> Finish
 
 # Edit
 
@@ -77,12 +77,12 @@ Source files may be edited under the "[Source Directory]" label in the Project E
 
 ## Build
 
-To build the project, in Eclipse, unfold boilerplate-eclipse project in Project Explorer,
+To build the project, in Eclipse, unfold PID_Controller-eclipse project in Project Explorer,
 unfold Build Targets, double click on "all" to build all projects.
 
 ## Run
 
-1. In Eclipse, right click on the boilerplate-eclipse in Project Explorer,
+1. In Eclipse, right click on the PID_Controller-eclipse in Project Explorer,
 select Run As -> Local C/C++ Application
 
 2. Choose the binaries to run (e.g. shell-app, cpp-test for unit testing.)
@@ -94,7 +94,7 @@ select Run As -> Local C/C++ Application
 1. Set breakpoint in source file (i.e. double click in the left margin on the line you want 
 the program to break).
 
-2. In Eclipse, right click on the boilerplate-eclipse in Project Explorer, select Debug As -> 
+2. In Eclipse, right click on the PID_Controller-eclipse in Project Explorer, select Debug As -> 
 Local C/C++ Application, choose the binaries to run (e.g. shell-app).
 
 3. If prompt to "Confirm Perspective Switch", select yes.
@@ -138,4 +138,5 @@ perspetive view (or Windows->Perspective->Open Perspective->C/C++).
 - Git
 
     It is possible to manage version control through Eclipse and the git plugin, but it typically requires creating another project. If you're interested in this, try it out yourself and contact me on Canvas.
+
 
