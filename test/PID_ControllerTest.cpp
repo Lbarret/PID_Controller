@@ -41,6 +41,42 @@ TEST(getAccumulationErrorTest, getAccumulationErrorTesting) {
 }
 
 /**
+   * @brief PIDController getAccumulationError test
+   * @param getAccumulationErrorTest, getAccumulationErrorTesting
+   * @return none
+   */
+TEST(getTimeIntervalTest, getTimeIntervalTesting) {
+  EXPECT_DOUBLE_EQ(0.005, pid.getTimeInterval());
+}
+
+/**
+   * @brief PIDController getAccumulationError test
+   * @param getAccumulationErrorTest, getAccumulationErrorTesting
+   * @return none
+   */
+TEST(getKpTest, getKpTesting) {
+  EXPECT_DOUBLE_EQ(0.05, pid.getKp());
+}
+
+/**
+   * @brief PIDController getAccumulationError test
+   * @param getAccumulationErrorTest, getAccumulationErrorTesting
+   * @return none
+   */
+TEST(getKiTest, getKiTesting) {
+  EXPECT_DOUBLE_EQ(0.4, pid.getKi());
+}
+
+/**
+   * @brief PIDController getAccumulationError test
+   * @param getAccumulationErrorTest, getAccumulationErrorTesting
+   * @return none
+   */
+TEST(getKdTest, getKdTesting) {
+  EXPECT_DOUBLE_EQ(0.0001, pid.getKd());
+}
+
+/**
    * @brief PIDController Compute test
    * @param ComputeTest, ComputeTesting
    * @return none
