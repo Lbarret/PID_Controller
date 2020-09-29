@@ -7,22 +7,27 @@
  * @Auther Loic Barret (Driver),  Aditya Goswami (Navigator)
  */
 
-// c++ header file
-#include <iostream>
-#include <math.h>
-
 // user defined header file
 #include "../include/PID_Controller.hpp"
+#include <math.h>
+
+// c++ header file
+#include <iostream>
 
 /**
  * @brief PIDController constructor
  * @param none
  * @return none
  */
-PIDController::PIDController(void) : Kp_(0.5), Ki_(0.001), Kd_(0.01),
-                                    time_interval_(0.05), previous_error_(0.0),
-                                    accumulation_error_(0.0) {
-    std::cout << "Default constructor called" << std::endl;
+PIDController::PIDController(void)
+    :
+    Kp_(0.5),
+    Ki_(0.001),
+    Kd_(0.01),
+    time_interval_(0.05),
+    previous_error_(0.0),
+    accumulation_error_(0.0) {
+  std::cout << "Default constructor called" << std::endl;
 }
 
 /**
@@ -34,10 +39,15 @@ PIDController::PIDController(void) : Kp_(0.5), Ki_(0.001), Kd_(0.01),
  * @return none
  */
 PIDController::PIDController(double Kp, double Ki, double Kd,
-                            double time_interval) : Kp_(Kp), Ki_(Ki), Kd_(Kd),
-                            time_interval_(time_interval),
-                            previous_error_(0.0), accumulation_error_(0.0) {
-    std::cout << "Parameterized constructor called" << std::endl;
+                             double time_interval)
+    :
+    Kp_(Kp),
+    Ki_(Ki),
+    Kd_(Kd),
+    time_interval_(time_interval),
+    previous_error_(0.0),
+    accumulation_error_(0.0) {
+  std::cout << "Parameterized constructor called" << std::endl;
 }
 
 /**
@@ -55,21 +65,19 @@ auto PIDController::compute(double target_velocity,
   // If error is zero return same velocity
   if (fabs(error) < 0.0000001) {
     return newActualVelocity;
-  } 
-  else{
-    while(fabs(error) > 0.0000001)
-    { 
+  } else {
+    while (fabs(error) > 0.0000001) {
       double propError = this->Kp_ * error;
-      this->accumulation_error_ += error*this->time_interval_;
+      this->accumulation_error_ += error * this->time_interval_;
       double integError = this->Ki_ * this->accumulation_error_;
-      double diffError = (error - this->previous_error_)/this->time_interval_;
+      double diffError = (error - this->previous_error_) / this->time_interval_;
       diffError = this->Kd_ * diffError;
       this->previous_error_ = error;
       newActualVelocity = propError + integError + diffError;
       error = target_velocity - newActualVelocity;
       if (fabs(error) < 0.000001) {
         break;
-        }
+      }
     }
   }
   return newActualVelocity;
@@ -81,7 +89,7 @@ auto PIDController::compute(double target_velocity,
  * @return double
  */
 auto PIDController::getPreviousError() -> double {
-    return previous_error_;
+  return previous_error_;
 }
 
 /**
@@ -90,7 +98,7 @@ auto PIDController::getPreviousError() -> double {
  * @return double
  */
 auto PIDController::getAccumulationError() -> double {
-    return accumulation_error_;
+  return accumulation_error_;
 }
 
 /**
@@ -99,7 +107,7 @@ auto PIDController::getAccumulationError() -> double {
  * @return double
  */
 auto PIDController::getTimeInterval() -> double {
-    return time_interval_;
+  return time_interval_;
 }
 
 /**
@@ -108,7 +116,7 @@ auto PIDController::getTimeInterval() -> double {
  * @return double
  */
 auto PIDController::getKp() -> double {
-    return Kp_;
+  return Kp_;
 }
 
 /**
@@ -117,7 +125,7 @@ auto PIDController::getKp() -> double {
  * @return double
  */
 auto PIDController::getKi() -> double {
-    return Ki_;
+  return Ki_;
 }
 /**
  * @brief Method to get value of private class member Kd_
@@ -125,5 +133,5 @@ auto PIDController::getKi() -> double {
  * @return double
  */
 auto PIDController::getKd() -> double {
-    return Kd_;
+  return Kd_;
 }

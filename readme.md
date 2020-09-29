@@ -18,6 +18,12 @@ This repository serves as a simple C++ PID controller algorithm implementation w
 
 **- Navigator:** Aditya Goswami 
 
+## Authors for Part 2
+
+**- Driver:** Pradeep Gopal
+
+**- Navigator:** Divyam Garg
+
 ## Standard install via command-line
 ```
 git clone --recursive https://github.com/Lbarret/PID_Controller
