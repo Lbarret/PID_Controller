@@ -37,7 +37,7 @@ TEST(ComputeTest, ComputeTesting) {
    * @return none
    */
 TEST(getPreviousErrorTest, getPreviousErrorTesting) {
-  EXPECT_DOUBLE_EQ(0, pid.getPreviousError());
+  EXPECT_DOUBLE_EQ(1, pid.getPreviousError());
 }
 
 /**
@@ -46,6 +46,6 @@ TEST(getPreviousErrorTest, getPreviousErrorTesting) {
    * @return none
    */
 TEST(getAccumulationErrorTest, getAccumulationErrorTesting) {
-  EXPECT_DOUBLE_EQ(0, pid.getAccumulationError());
+  EXPECT_DOUBLE_EQ(.005, pid.getAccumulationError());
 }
 
