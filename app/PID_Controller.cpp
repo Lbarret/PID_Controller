@@ -9,6 +9,7 @@
 
 // c++ header file
 #include <iostream>
+#include <math.h>
 
 // user defined header file
 #include "../include/PID_Controller.hpp"
@@ -52,12 +53,12 @@ auto PIDController::compute(double target_velocity,
   // Setting new actual velocity to return it in case of error is zero
   auto newActualVelocity = actual_velocity;
   // If error is zero return same velocity
-  if (fabs(error) < 0.5) {
+  if (fabs(error) < 0.001) {
     return newActualVelocity;
   } 
   else{
-    while(fabs(error) > 0.5)
-    {
+    while(fabs(error) > 0.001)
+    { 
       double propError = this->Kp_ * error;
       this->accumulation_error_ += error*this->time_interval_;
       double integError = this->Ki_ * this->accumulation_error_;
@@ -66,11 +67,12 @@ auto PIDController::compute(double target_velocity,
       this->previous_error_ = error;
       newActualVelocity = propError + integError + diffError;
       error = target_velocity - newActualVelocity;
-      std::cout << newActualVelocity <<std::endl;
-      std::cout << "Error" << error <<std::endl;
+      if (fabs(error) < 0.001) {
+        break;
+        }
     }
-    return newActualVelocity;
   }
+  return newActualVelocity;
 }
 
 /**

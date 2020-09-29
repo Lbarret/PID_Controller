@@ -28,7 +28,7 @@ TEST(ConstructorTest, ConstructorTesting) {
    * @return none
    */
 TEST(ComputeTest, ComputeTesting) {
-  EXPECT_DOUBLE_EQ(2.072, pid.compute(3, 2));
+  EXPECT_DOUBLE_EQ(2.9990007902761038, pid.compute(3, 2));
 }
 
 /**
