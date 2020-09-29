@@ -5,7 +5,7 @@
 
 ## Overview
 
-This repo is developed as a part of developing new mobile robot product for ACME Robotics. It implements PID Controller functionality for a new mobile robot. The team members working to develop this project uses pair programming software development technique. The authors are listed in the author section below.
+This repo is developed as a part of developing new mobile robot product for ACME Robotics. It implements [PID Controller](https://en.wikipedia.org/wiki/PID_controller) functionality for a new mobile robot. The team members working to develop this project uses pair programming software development technique. The authors are listed in the author section below.
 
 This repository serves as a simple C++ PID controller algorithm implementation with:
 
