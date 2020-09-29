@@ -1,5 +1,5 @@
 /**
- * @file pid.cpp
+ * @file PID_Controller.hpp
  * @version 1.0
  * @brief Header file for pid class
  * @Created on: Sep 28, 2020
