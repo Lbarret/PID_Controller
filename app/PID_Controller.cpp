@@ -47,8 +47,30 @@ PIDController::PIDController(double Kp, double Ki, double Kd,
  */
 auto PIDController::compute(double target_velocity,
                             double actual_velocity) -> double {
-  std::cout << "Implement compute function" << std::endl;
-  return 0;
+  // double diffError, propError, integError;
+  double error = target_velocity - actual_velocity;
+  // Setting new actual velocity to return it in case of error is zero
+  auto newActualVelocity = actual_velocity;
+  // If error is zero return same velocity
+  if (fabs(error) < 0.5) {
+    return newActualVelocity;
+  } 
+  else{
+    while(fabs(error) > 0.5)
+    {
+      double propError = this->Kp_ * error;
+      this->accumulation_error_ += error*this->time_interval_;
+      double integError = this->Ki_ * this->accumulation_error_;
+      double diffError = (error - this->previous_error_)/this->time_interval_;
+      diffError = this->Kd_ * diffError;
+      this->previous_error_ = error;
+      newActualVelocity = propError + integError + diffError;
+      error = target_velocity - newActualVelocity;
+      std::cout << newActualVelocity <<std::endl;
+      std::cout << "Error" << error <<std::endl;
+    }
+    return newActualVelocity;
+  }
 }
 
 /**
