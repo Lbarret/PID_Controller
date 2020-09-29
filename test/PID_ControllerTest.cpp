@@ -3,7 +3,8 @@
  *@brief The PID_Controller class is tested here,
  *@Created on: Sep 28, 2020
  *@copyright 2020
- *@copyright owner : Loic Barret, Aditya Goswami
+ *@copyright owner: Part 1 - Loic Barret, Aditya Goswami
+ *@copyright owner: Part 2 - Pradeep Gopal (Driver),  Divyam Garg (Navigator)
  */
 #include <gtest/gtest.h>
 #include "PID_Controller.hpp"
