@@ -21,10 +21,10 @@
  */
 PIDController::PIDController(void)
     :
-    Kp_(0.5),
-    Ki_(0.001),
-    Kd_(0.01),
-    time_interval_(0.05),
+    Kp_(0.05),
+    Ki_(0.4),
+    Kd_(0.0001),
+    time_interval_(0.005),
     previous_error_(0.0),
     accumulation_error_(0.0) {
   std::cout << "Default constructor called" << std::endl;
@@ -47,7 +47,6 @@ PIDController::PIDController(double Kp, double Ki, double Kd,
     time_interval_(time_interval),
     previous_error_(0.0),
     accumulation_error_(0.0) {
-  std::cout << "Parameterized constructor called" << std::endl;
 }
 
 /**
