@@ -4,7 +4,7 @@
  * @brief Header file for pid class
  * @Created on: Sep 28, 2020
  * @copyright 2020 
- * @Auther Loic Barret (Driver),  Aditya Goswami (Navigator)
+ * @Author Loic Barret (Driver),  Aditya Goswami (Navigator)
  */
 
 // c++ header file

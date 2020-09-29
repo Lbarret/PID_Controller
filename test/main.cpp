@@ -1,6 +1,6 @@
 /**
  * @file main.cpp
- * @Auther Loic Barret (Driver), Aditya Goswami (Navigator)
+ * @Author Loic Barret (Driver), Aditya Goswami (Navigator)
  * @brief Test Driven Development Exercise
  * @copyright 2020
  */
