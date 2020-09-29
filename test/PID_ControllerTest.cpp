@@ -41,8 +41,8 @@ TEST(getAccumulationErrorTest, getAccumulationErrorTesting) {
 }
 
 /**
-   * @brief PIDController getAccumulationError test
-   * @param getAccumulationErrorTest, getAccumulationErrorTesting
+   * @brief PIDController getTimeIntervalTest test
+   * @param getTimeIntervalTest, getTimeIntervalTesting
    * @return none
    */
 TEST(getTimeIntervalTest, getTimeIntervalTesting) {
@@ -50,8 +50,8 @@ TEST(getTimeIntervalTest, getTimeIntervalTesting) {
 }
 
 /**
-   * @brief PIDController getAccumulationError test
-   * @param getAccumulationErrorTest, getAccumulationErrorTesting
+   * @brief PIDController getAKpTest test
+   * @param getKpTest, getKpTesting
    * @return none
    */
 TEST(getKpTest, getKpTesting) {
@@ -59,8 +59,8 @@ TEST(getKpTest, getKpTesting) {
 }
 
 /**
-   * @brief PIDController getAccumulationError test
-   * @param getAccumulationErrorTest, getAccumulationErrorTesting
+   * @brief PIDController getKiTest test
+   * @param getKiTest, getKiTesting
    * @return none
    */
 TEST(getKiTest, getKiTesting) {
@@ -68,8 +68,8 @@ TEST(getKiTest, getKiTesting) {
 }
 
 /**
-   * @brief PIDController getAccumulationError test
-   * @param getAccumulationErrorTest, getAccumulationErrorTesting
+   * @brief PIDController getKdTest test
+   * @param getKdTest, getKdTesting
    * @return none
    */
 TEST(getKdTest, getKdTesting) {
