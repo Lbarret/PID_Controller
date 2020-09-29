@@ -18,6 +18,7 @@ int main() {
   PIDController control(0.05, 0.4, 0.0001, 0.005);
   float target_velocity = 400.0;
   float actual_velocity = 20.0;
+  std::cout << "Starting PID Controller with Kp = " << control.getKp() <<" Ki = " << control.getKi() << " Kd = " << control.getKd() <<std::endl;
   std::cout << "The actual velocity is = " << actual_velocity << std::endl;
   std::cout << "The target velocity is = " << target_velocity << std::endl;
   std::cout << "The New velocity using PID controller is = "
