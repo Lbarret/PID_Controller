@@ -53,11 +53,11 @@ auto PIDController::compute(double target_velocity,
   // Setting new actual velocity to return it in case of error is zero
   auto newActualVelocity = actual_velocity;
   // If error is zero return same velocity
-  if (fabs(error) < 0.001) {
+  if (fabs(error) < 0.0000001) {
     return newActualVelocity;
   } 
   else{
-    while(fabs(error) > 0.001)
+    while(fabs(error) > 0.0000001)
     { 
       double propError = this->Kp_ * error;
       this->accumulation_error_ += error*this->time_interval_;
@@ -67,7 +67,7 @@ auto PIDController::compute(double target_velocity,
       this->previous_error_ = error;
       newActualVelocity = propError + integError + diffError;
       error = target_velocity - newActualVelocity;
-      if (fabs(error) < 0.001) {
+      if (fabs(error) < 0.000001) {
         break;
         }
     }

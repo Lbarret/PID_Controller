@@ -23,15 +23,6 @@ TEST(ConstructorTest, ConstructorTesting) {
 }
 
 /**
-   * @brief PIDController Compute test
-   * @param ComputeTest, ComputeTesting
-   * @return none
-   */
-TEST(ComputeTest, ComputeTesting) {
-  EXPECT_DOUBLE_EQ(2.9990007902761038, pid.compute(3, 2));
-}
-
-/**
    * @brief PIDController getPreviousError test
    * @param getPreviousErrorTest, getPreviousErrorTesting
    * @return none
@@ -48,4 +39,25 @@ TEST(getPreviousErrorTest, getPreviousErrorTesting) {
 TEST(getAccumulationErrorTest, getAccumulationErrorTesting) {
   EXPECT_DOUBLE_EQ(0, pid.getAccumulationError());
 }
+
+/**
+   * @brief PIDController Compute test
+   * @param ComputeTest, ComputeTesting
+   * @return none
+   */
+TEST(ComputeTest, ComputeTesting) {
+  EXPECT_NEAR(2.9990007902761038, pid.compute(3, 2), 0.5);
+}
+
+/**
+   * @brief PIDController Compute test
+   * @param ComputeTest1, ComputeTesting1
+   * @return none
+   */
+TEST(ComputeTest1, ComputeTesting1) {
+  EXPECT_NEAR(29.990007902761038, pid.compute(30, 2), 0.5);
+}
+
+
+
 
