@@ -16,12 +16,6 @@
  */
 class PIDController{
  public:
-  /**
-   * @brief PIDController constructor
-   * @param none
-   * @return none 
-   */
-  PIDController();
 
   /**
    * @brief Parameterized PID Constructor

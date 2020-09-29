@@ -14,21 +14,6 @@
 // c++ header file
 #include <iostream>
 
-/**
- * @brief PIDController constructor
- * @param none
- * @return none
- */
-PIDController::PIDController(void)
-    :
-    Kp_(0.05),
-    Ki_(0.4),
-    Kd_(0.0001),
-    time_interval_(0.005),
-    previous_error_(0.0),
-    accumulation_error_(0.0) {
-  std::cout << "Default constructor called" << std::endl;
-}
 
 /**
  * @brief Parameterized PID Constructor
